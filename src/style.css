@@ -1,5 +1,61 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
+body {
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+/* 📝 Estilos para el contenedor principal */
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
     background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.count {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.count strong {
+    color: #007bff;
+    font-size: 1.3rem;
+}
+
+/* 📝 CSS Grid: Crea una cuadrícula responsive automáticamente */
+/* repeat(auto-fill, ...) genera tantas columnas como quepan */
+/* minmax(200px, 1fr) - cada columna mínimo 200px, máximo 1 fracción del espacio */
+.domain-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 📝 Estilos para cada tarjeta de dominio */
+.domain-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+/* 📝 Efecto hover: se eleva al pasar el mouse */
+.domain-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
